@@ -1,6 +1,6 @@
-<h1>All Customers</h1>
+<h1>Blacklist</h1>
 
-<%= link_to 'toBlackList', blacklist_index_path %><br />
+<%= link_to 'back', customers_path %><br />
 
 <br />Name Phone Description inBlackList?<hr />
 <% @customers.each do |customer| %>
@@ -9,7 +9,6 @@
   <%= customer.phone %>
   <%= customer.description %>
   <%= customer.b_list %>
-  <%= link_to 'To black list', customer_path(@customers), method: :patch %>
-  <%= link_to 'Edit' %>
+  <%= link_to 'Remove from black list', customer_path(@customers), method: :patch %>
   <hr />
 <% end %>
